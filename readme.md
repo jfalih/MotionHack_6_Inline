@@ -24,11 +24,19 @@ Setelah mengclone project kamu dapat menginstall library yang ada didalam packag
   npm install
 ```
 
-Kamu bisa menjalankan di emulator android dengan menjalankan command
+Kamu bisa menjalankan di emulator android dengan menjalankan command:
 
 ```bash
   npm run android
 ```
+
+Kamu bisa menjalankan unit testing yang ada pada folder __test__ dengan menggunakan command:
+
+```bash
+  npm test
+```
+
+Thanks...
 
 ## Authors
 

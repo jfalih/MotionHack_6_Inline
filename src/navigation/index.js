@@ -7,6 +7,7 @@ import AuthLoginScreen from './../screens/Auth/AuthLoginScreen/index';
 import AuthRegisterScreen from './../screens/Auth/AuthRegisterScreen/index';
 import HomeScreen from '../screens/HomeScreen';
 import TabNavigation from './TabNavigation/index';
+import PlaceScreen from './../screens/PlaceScreen/index';
 const Stack = createStackNavigator();
 const Navigation = () => (
     <NavigationContainer>
@@ -16,6 +17,7 @@ const Navigation = () => (
                 <Stack.Screen name="Splash" component={SplashScreen}/>
                 <Stack.Screen name="Onboarding" component={OnboardingScreen}/>
                 <Stack.Screen name="Home" component={TabNavigation}/>
+                <Stack.Screen name="Place" component={PlaceScreen}/>
                 {/* Auth */}
                 <Stack.Screen name="AuthLogin" component={AuthLoginScreen}/>
                 <Stack.Screen name="AuthRegister" component={AuthRegisterScreen}/>

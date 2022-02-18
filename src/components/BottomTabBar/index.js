@@ -12,7 +12,7 @@ const BottomTabBar = ({ state, descriptors, navigation }) => {
         borderTopColor:'#f2f2f2',
         borderTopWidth:1,
     }}>
-      {state.routes.map((route, index) => {
+      {state?.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =
           options.tabBarLabel !== undefined

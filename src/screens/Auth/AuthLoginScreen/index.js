@@ -3,6 +3,8 @@ import { View, ScrollView, Text, TextInput, TouchableOpacity } from 'react-nativ
 import { DEVICE_WIDTH, PRIMARY_COLOR } from '../../../configs/style';
 import Button from '../../../components/Button';
 import RemixIcon from 'react-native-remix-icon';
+import GoogleLogo from '../../../assets/icons/GoogleLogo';
+import FacebookLogo from './../../../assets/icons/FacebookLogo/index';
 const AuthLoginScreen = ({ navigation }) => {
     return(
         <View style={{
@@ -118,20 +120,24 @@ const AuthLoginScreen = ({ navigation }) => {
                     <TouchableOpacity style={{
                         backgroundColor:'#f2f2f2',
                         width: 60,
+                        alignItems:'center',
+                        justifyContent:'center',
                         height: 60,
                         marginRight:5,
                         borderRadius:30
                     }}>
-
+                        <GoogleLogo />
                     </TouchableOpacity>    
                     <TouchableOpacity style={{
                         backgroundColor:'#f2f2f2',
                         width: 60,
+                        alignItems:'center',
+                        justifyContent:'center',
                         marginLeft:5,
                         height: 60,
                         borderRadius:30
                     }}>
-
+                        <FacebookLogo/>
                     </TouchableOpacity>
                 </View>
             </ScrollView>

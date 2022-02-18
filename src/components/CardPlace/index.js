@@ -2,9 +2,9 @@
 import React from 'react'
 import { TouchableOpacity, Image, View, Text } from 'react-native';
 
-const CardPlace = ({title, description}) => {
+const CardPlace = ({title, source, onPress, description}) => {
     return(
-        <TouchableOpacity style={{
+        <TouchableOpacity onPress={onPress} style={{
             marginRight:15,
             width: 180,
             height: 220,
@@ -14,9 +14,7 @@ const CardPlace = ({title, description}) => {
                 width:180,
                 height:220,
                 borderRadius:20
-            }} source={
-                require('../../assets/images/tempat/polres_bandung.png')
-            }/>
+            }} source={source}/>
             <View style={{
                 width: 180,
                 height: 220,

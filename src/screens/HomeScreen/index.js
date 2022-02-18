@@ -5,7 +5,8 @@ import RemixIcon from 'react-native-remix-icon';
 import SwipeContainer from 'react-native-scroll-up-container';
 import CardPlace from '../../components/CardPlace';
 import { PRIMARY_COLOR } from '../../configs/style';
-const HomeScreen = () => {
+import dataTempat from '../../dummies/dataTempat';
+const HomeScreen = ({ navigation }) => {
     const data = [{
         id: 1,
         text:'Resto',
@@ -26,15 +27,6 @@ const HomeScreen = () => {
         id: 5,
         text:'Service',
         icon:'service-line'
-    }];
-    const dataTempat = [{
-        id: 1,
-        title: 'Polres Bandung',
-        description: 'Lorem ipsum dolor sit amet. test lipsum'
-    },{
-        id: 2,
-        title: 'Curug Badak',
-        description: 'Lorem ipsum dolor sit amet. test lipsum'
     }];
     return(
         <SwipeContainer topComponentStyle={{
@@ -238,16 +230,24 @@ const HomeScreen = () => {
                     marginBottom:20
                 }}
                 renderItem={({item}) => (
-                    <CardPlace title={item.title} description={item.description}/>
+                    <CardPlace source={item.source} onPress={() => navigation.navigate('Place', { item })} title={item.title} description={item.description}/>
                 )}
             >
             </FlatList>
+            <View style={{
+                marginBottom:20,
+            }}>
             <Text style={{
                 color:'#000',
                 fontSize:18,
-                marginBottom:20,
                 fontFamily:'Inter-Bold'
-            }}>Rekomendasi Untukmu</Text>
+            }}>Populer Disekitar</Text>
+            <Text style={{
+                color:PRIMARY_COLOR,
+                fontSize:24,
+                fontFamily:'Inter-Bold'
+            }}>Bandung</Text>
+            </View>
             <FlatList
                 horizontal
                 data={dataTempat}
@@ -256,7 +256,7 @@ const HomeScreen = () => {
                     marginBottom:20
                 }}
                 renderItem={({item}) => (
-                    <CardPlace title={item.title} description={item.description}/>
+                    <CardPlace  source={item.source}  title={item.title} description={item.description}/>
                 )}
             >
             </FlatList>

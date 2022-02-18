@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly across screens 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "borderTopColor": "#f2f2f2",
+      "borderTopWidth": 1,
+      "flexDirection": "row",
+      "height": 60,
+    }
+  }
+/>
+`;

@@ -54,7 +54,7 @@ const OnboardingScreen = ({ navigation }) => {
                     color:'#000',
                     marginBottom:20,
                     fontFamily:'Inter-Regular'
-                }}>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</Text>
+                }}>Selamat datang di inline, aplikasi memudahkan kamu dalam mengantre tanpa menunggu pada lokasi.</Text>
                 <View style={{
                     flexDirection:'row',
                     justifyContent:'space-between'

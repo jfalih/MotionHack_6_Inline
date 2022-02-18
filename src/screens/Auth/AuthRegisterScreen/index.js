@@ -9,6 +9,8 @@ import {
 import {DEVICE_WIDTH, PRIMARY_COLOR} from '../../../configs/style';
 import Button from '../../../components/Button';
 import RemixIcon from 'react-native-remix-icon';
+import GoogleLogo from './../../../assets/icons/GoogleLogo/index';
+import FacebookLogo from './../../../assets/icons/FacebookLogo/index';
 const AuthRegisterScreen = ({navigation}) => {
   return (
     <View
@@ -58,7 +60,7 @@ const AuthRegisterScreen = ({navigation}) => {
           }}
         />
         <TextInput
-          placeholder="Nomor Handphone / Email"
+          placeholder="Nomor Ponsel atau Email"
           placeholderTextColor="#eee"
           style={{
             height: 60,
@@ -175,19 +177,23 @@ const AuthRegisterScreen = ({navigation}) => {
                         backgroundColor:'#f2f2f2',
                         width: 60,
                         height: 60,
+                        alignItems:'center',
+                        justifyContent:'center',
                         marginRight:5,
                         borderRadius:30
                     }}>
-
+                      <GoogleLogo/>
                     </TouchableOpacity>    
                     <TouchableOpacity style={{
                         backgroundColor:'#f2f2f2',
                         width: 60,
                         marginLeft:5,
+                        alignItems:'center',
+                        justifyContent:'center',
                         height: 60,
                         borderRadius:30
                     }}>
-
+                      <FacebookLogo/>
                     </TouchableOpacity>
                 </View>
       </ScrollView>
