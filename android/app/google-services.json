@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "4501711388",
+    "project_id": "inline-4aaba",
+    "storage_bucket": "inline-4aaba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4501711388:android:be83a2ba2ec39fd0638dd9",
+        "android_client_info": {
+          "package_name": "com.motionhack.inline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "4501711388-3a8bef6c3ibcdbj7bvhlri1smqhlbmk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyIV2O9GnpSreDUFdJXI0q5rKTdBCdNhs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "4501711388-3a8bef6c3ibcdbj7bvhlri1smqhlbmk4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

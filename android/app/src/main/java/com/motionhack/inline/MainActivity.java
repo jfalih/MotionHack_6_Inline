@@ -1,4 +1,4 @@
-package com.motionhack_6_inline;
+package com.motionhack.inline;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "MotionHack_6_Inline";
+    return "inline";
   }
 }

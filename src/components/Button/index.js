@@ -1,14 +1,24 @@
 import React from 'react'
-import { TouchableOpacity, Text } from 'react-native';
+import { TouchableOpacity, Text, ActivityIndicator } from 'react-native';
     
 const Button = ({
     buttonStyle,
     textStyle,
     text,
-    onPress
+    onPress,
+    disabled,
+    loading,
+    activityIndicatorColor,
 }) => (
-    <TouchableOpacity onPress={onPress} style={buttonStyle}>
-        <Text style={textStyle}>{text}</Text>
+    <TouchableOpacity 
+    disabled={loading ? loading : disabled}
+    onPress={onPress} 
+    style={buttonStyle}>
+        {loading ?
+            <ActivityIndicator size="small" color={activityIndicatorColor} />
+            :
+            <Text style={textStyle}>{text}</Text>
+        }
     </TouchableOpacity>
 )
 export default Button;

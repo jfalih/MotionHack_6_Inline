@@ -6,28 +6,12 @@ import SwipeContainer from 'react-native-scroll-up-container';
 import CardPlace from '../../components/CardPlace';
 import { PRIMARY_COLOR } from '../../configs/style';
 import dataTempat from '../../dummies/dataTempat';
+import { useSelector } from 'react-redux';
+import dataCategory from '../../dummies/dataCategory';
+import NumberFormat from 'react-number-format';
 const HomeScreen = ({ navigation }) => {
-    const data = [{
-        id: 1,
-        text:'Resto',
-        icon:'restaurant-2-line'
-    },{
-        id: 2,
-        text:'Transport',
-        icon:'roadster-line'
-    },{
-        id: 3,
-        text:'Ticket',
-        icon:'ticket-line'
-    },{
-        id: 4,
-        text:'Kesehatan',
-        icon:'empathize-line'
-    },{
-        id: 5,
-        text:'Service',
-        icon:'service-line'
-    }];
+  
+    const auth = useSelector(state => state.auth);
     return(
         <SwipeContainer topComponentStyle={{
             backgroundColor:'#FAFCFF'
@@ -83,7 +67,7 @@ const HomeScreen = ({ navigation }) => {
                             fontFamily:'Inter-Bold',
                             fontSize:28,
                             color:'#000'
-                        }}>Andrew</Text>
+                        }}>{auth.authData.fullname}</Text>
                     </View>
                     <View style={{
                         backgroundColor:PRIMARY_COLOR,
@@ -97,11 +81,19 @@ const HomeScreen = ({ navigation }) => {
                             fontSize:14,
                             fontFamily:'Inter-Bold'
                         }}>Saldo </Text>
-                        <Text style={{
-                            color:'#fff',
-                            fontSize:20,
-                            fontFamily:'Inter-Bold'
-                        }}>Rp10.000.000</Text>
+                         <NumberFormat
+                            value={auth.authData.balance}
+                            displayType={'text'}
+                            thousandSeparator={'.'}
+                            decimalSeparator={','}
+                            prefix="Rp"
+                            renderText={(value) => 
+                                <Text style={{
+                                    color:'#fff',
+                                    fontSize:20,
+                                    fontFamily:'Inter-Bold'
+                                }}>{value}</Text> 
+                            }/>
                     </View>
                 </View>
                 <View style={{
@@ -110,7 +102,7 @@ const HomeScreen = ({ navigation }) => {
                     flexDirection:'row',
                     justifyContent:'space-evenly'
                 }}>
-                    <TouchableOpacity style={{
+                    <TouchableOpacity onPress={() => navigation.navigate('Scan')} style={{
                         width: 70,
                         alignItems:'center'
                     }}>
@@ -127,7 +119,7 @@ const HomeScreen = ({ navigation }) => {
                             fontFamily:'Inter-Regular'
                         }}>Scan Qr</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{
+                    <TouchableOpacity onPress={() => navigation.navigate('History')} style={{
                         width: 70,
                         alignItems:'center'
                     }}>
@@ -144,7 +136,10 @@ const HomeScreen = ({ navigation }) => {
                             fontFamily:'Inter-Regular'
                         }}>History</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{
+                    <TouchableOpacity onPress={() => navigation.navigate('WebView',{
+                        title:'Topup Dana',
+                        uri: 'https://www.dana.id/'
+                    })} style={{
                         width: 70,
                         alignItems:'center'
                     }}>
@@ -185,7 +180,7 @@ const HomeScreen = ({ navigation }) => {
             }}></View>
             <FlatList
                 horizontal
-                data={data}
+                data={dataCategory}
                 style={{
                     width: '100%',
                     marginBottom:20
@@ -197,7 +192,9 @@ const HomeScreen = ({ navigation }) => {
                         alignItems:'center',
                         justifyContent:'center'
                     }}>
-                    <TouchableOpacity style={{
+                    <TouchableOpacity onPress={() => navigation.navigate('Category', {
+                        item
+                    })} style={{
                         width: 70,
                         height: 70,
                         alignItems:'center',
