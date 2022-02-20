@@ -300,13 +300,17 @@ const PlaceScreen = ({
             </View>
             <FlatList
                 horizontal
-                data={dataTempat}
+                data={dataTempat.filter(val => {
+                    if(val.id !== item.id){
+                        return val
+                    }
+                })}
                 style={{
                     width: '100%',
                     marginBottom:20
                 }}
                 renderItem={({item}) => (
-                    <CardPlace  source={item.source}  title={item.title} description={item.description}/>
+                    <CardPlace onPress={() => navigation.navigate('Place', { item })} source={item.source}  title={item.title} description={item.description}/>
                 )}
             >
             </FlatList>

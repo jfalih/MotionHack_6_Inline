@@ -37,6 +37,13 @@ Kamu bisa menjalankan di emulator android dengan menjalankan command:
   npm run android
 ```
 
+Kamu bisa login dengan:
+
+```bash
+  Email: member@inline.com
+  Password: member123
+```
+
 Kamu bisa menjalankan unit testing yang ada pada folder __test__ dengan menggunakan command:
 
 ```bash

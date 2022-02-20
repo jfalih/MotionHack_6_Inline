@@ -253,7 +253,7 @@ const HomeScreen = ({ navigation }) => {
                     marginBottom:20
                 }}
                 renderItem={({item}) => (
-                    <CardPlace  source={item.source}  title={item.title} description={item.description}/>
+                    <CardPlace onPress={() => navigation.navigate('Place', { item })} source={item.source}  title={item.title} description={item.description}/>
                 )}
             >
             </FlatList>
