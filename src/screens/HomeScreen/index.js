@@ -43,7 +43,7 @@ const HomeScreen = ({ navigation }) => {
                             color:"#ddd"
                         }}>Cari ticket, tempat disini.</Text>
                     </View>
-                    <TouchableOpacity style={{
+                    <TouchableOpacity onPress={() => navigation.navigate('Notification')} style={{
                         width: 30,
                         height: 30,
                         alignItems:'center',

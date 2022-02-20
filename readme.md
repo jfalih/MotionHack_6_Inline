@@ -1,5 +1,5 @@
 
-# Inline App (UnderDevelop)
+# Inline App
 
 Inline merupakan aplikasi antrian mengambil antrian secara online, yang dibuat dengan menggunakan tech sebagai berikut:
 
@@ -44,3 +44,7 @@ Aplikasi ini dibuat oleh kelompok 6, dengan anggota:
 - [Jan Falih Fadhillah](https://www.github.com/jfalih) sebagai Mobile Programmer
 - Artisa Bunga sebagai Business Analyst
 - Ari Ziddan Nugraha sebagai UI/UX
+
+## Credits
+
+Semua media gambar berasal dari unsplash.com, dan illustrasi berasal dari undraw.co
