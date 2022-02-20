@@ -11,6 +11,13 @@ Inline merupakan aplikasi antrian mengambil antrian secara online, yang dibuat d
 
 ## Installation
 
+
+Bisa install di:
+
+```bash
+  https://bit.ly/motionhack-inline
+```
+
 Kamu dapat menginstall dan menjalankan project ini dengan cara, sebagai berikut:
 
 ```bash
